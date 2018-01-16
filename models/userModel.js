@@ -16,7 +16,7 @@ const userSchema = new Schema({
   },
   myRumah : [{
     type : Schema.Types.ObjectId,
-    ref : 'rumah'
+    ref : 'House'
   }]
 })
 
