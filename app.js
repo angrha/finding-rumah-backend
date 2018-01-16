@@ -4,6 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose   = require('mongoose');
                   require('dotenv').config()
 mongoose.connect('mongodb://localhost/findingrumah'); //connect to database
