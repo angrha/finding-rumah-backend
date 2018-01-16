@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const houseSchema = new Schema({
-  house_name: {
+  houseName: {
     type: String,
     required:[true, 'house name required']
   },
@@ -14,13 +14,23 @@ const houseSchema = new Schema({
     type: Number,
     required:[true, 'set your price']
   },
-  type_house: {
-    type: String,
-    required:[true, 'specification house required']
+  typeHouse: {
+    type: String
   },
-  large_house: {
+  largeHouse: {
+    type: String
+  },
+  image: {
     type: String,
-    required:[true, 'specification house required']
+    required:[true, 'image required']
+  },
+  contact: {
+    type: String,
+    required:[true, 'contact required']
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 })
 
